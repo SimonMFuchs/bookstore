@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookstore</title>
-    
+
+    <script src="./scripts/database.js"></script>
     <script src="./scripts/templates.js"></script>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./styles/standards.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body onload="init('content-books')">
     <header></header>
     <h1>VF Bookstore</h1>
-    <main></main>
-    <footer></footer>
+    <main>
+        <div id="content-books"></div>
+    </main>
 </body>
 </html>
