@@ -40,8 +40,9 @@ header{
 }
 
 .shelf-level img {
-    height: 80px;
+    height: 120px;
     width: auto;
+    margin: 24px;
 }
 
 .book-info {
@@ -64,4 +65,14 @@ header{
 
 .book-comments {
     margin: 16px;  
+}
+
+.book-comments-content {
+    height: 160px;
+    overflow-y: auto;
+}
+
+.book-comments-content table tr {
+    display: flex;
+    align-items: flex-start;
 }

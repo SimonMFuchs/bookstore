@@ -71,105 +71,105 @@ let books = [
         }
       ]
     },
-    {
-      "name": "Das Rätsel der Zeit",
-      "author": "Alexander Weiss",
-      "likes": 750,
-      "liked": false,
-      "price": 18.00,
-      "publishedYear": 2020,
-      "genre": "Science-Fiction",
-      "comments": [
-        {
-          "name": "BuchKenner",
-          "comment": "Ein spannendes Abenteuer, das mich von Anfang an mitgerissen hat."
-        },
-        {
-          "name": "LeseWurm",
-          "comment": "Die Liebesgeschichte war herzergreifend und wunderschön geschrieben."
-        }
-      ]
-    },
-    {
-      "name": "Der letzte Wächter",
-      "author": "Sabine Grün",
-      "likes": 1300,
-      "liked": true,
-      "price": 16.75,
-      "publishedYear": 2017,
-      "genre": "Fantasy",
-      "comments": []
-    },
-    {
-      "name": "Im Schatten des Mondes",
-      "author": "Philipp Silber",
-      "likes": 890,
-      "liked": false,
-      "price": 12.30,
-      "publishedYear": 2022,
-      "genre": "Science-Fiction",
-      "comments": [
-        {
-          "name": "BücherLiebhaber",
-          "comment": "Eine magische Reise durch eine faszinierende Fantasiewelt, absolut fesselnd."
-        },
-        {
-          "name": "Leseratte",
-          "comment": "Ein packender Science-Fiction-Roman, der mich zum Nachdenken gebracht hat."
-        }
-      ]
-    },
-    {
-      "name": "Jenseits der Sterne",
-      "author": "Oliver Schwarz",
-      "likes": 1450,
-      "liked": true,
-      "price": 21.00,
-      "publishedYear": 2015,
-      "genre": "Science-Fiction",
-      "comments": [
-        {
-          "name": "Leser123",
-          "comment": "Ein fesselndes Abenteuer, das mich von Anfang bis Ende mitgerissen hat."
-        }
-      ]
-    },
-    {
-      "name": "Das verborgene Königreich",
-      "author": "Elena Gold",
-      "likes": 920,
-      "liked": false,
-      "price": 17.50,
-      "publishedYear": 2020,
-      "genre": "Fantasy",
-      "comments": [
-        {
-          "name": "Bookworm92",
-          "comment": "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat."
-        }
-      ]
-    },
-    {
-      "name": "Liebe in Zeiten des Krieges",
-      "author": "Emilia Rot",
-      "likes": 1800,
-      "liked": true,
-      "price": 19.99,
-      "publishedYear": 2016,
-      "genre": "Romantik",
-      "comments": [
-        {
-          "name": "Bibliophile23",
-          "comment": "Die Fantasiewelt war so lebendig, ich konnte das Buch kaum aus der Hand legen."
-        },
-        {
-          "name": "StorySeeker",
-          "comment": "Eine unglaublich berührende Liebesgeschichte, die mich tief bewegt hat."
-        },
-        {
-          "name": "SciFiExplorer",
-          "comment": "Spannende Zukunftsvisionen und interessante Charaktere machten diesen Roman einzigartig."
-        }
-      ]
-    }
+    // {
+    //   "name": "Das Rätsel der Zeit",
+    //   "author": "Alexander Weiss",
+    //   "likes": 750,
+    //   "liked": false,
+    //   "price": 18.00,
+    //   "publishedYear": 2020,
+    //   "genre": "Science-Fiction",
+    //   "comments": [
+    //     {
+    //       "name": "BuchKenner",
+    //       "comment": "Ein spannendes Abenteuer, das mich von Anfang an mitgerissen hat."
+    //     },
+    //     {
+    //       "name": "LeseWurm",
+    //       "comment": "Die Liebesgeschichte war herzergreifend und wunderschön geschrieben."
+    //     }
+    //   ]
+    // },
+    // {
+    //   "name": "Der letzte Wächter",
+    //   "author": "Sabine Grün",
+    //   "likes": 1300,
+    //   "liked": true,
+    //   "price": 16.75,
+    //   "publishedYear": 2017,
+    //   "genre": "Fantasy",
+    //   "comments": []
+    // },
+    // {
+    //   "name": "Im Schatten des Mondes",
+    //   "author": "Philipp Silber",
+    //   "likes": 890,
+    //   "liked": false,
+    //   "price": 12.30,
+    //   "publishedYear": 2022,
+    //   "genre": "Science-Fiction",
+    //   "comments": [
+    //     {
+    //       "name": "BücherLiebhaber",
+    //       "comment": "Eine magische Reise durch eine faszinierende Fantasiewelt, absolut fesselnd."
+    //     },
+    //     {
+    //       "name": "Leseratte",
+    //       "comment": "Ein packender Science-Fiction-Roman, der mich zum Nachdenken gebracht hat."
+    //     }
+    //   ]
+    // },
+    // {
+    //   "name": "Jenseits der Sterne",
+    //   "author": "Oliver Schwarz",
+    //   "likes": 1450,
+    //   "liked": true,
+    //   "price": 21.00,
+    //   "publishedYear": 2015,
+    //   "genre": "Science-Fiction",
+    //   "comments": [
+    //     {
+    //       "name": "Leser123",
+    //       "comment": "Ein fesselndes Abenteuer, das mich von Anfang bis Ende mitgerissen hat."
+    //     }
+    //   ]
+    // },
+    // {
+    //   "name": "Das verborgene Königreich",
+    //   "author": "Elena Gold",
+    //   "likes": 920,
+    //   "liked": false,
+    //   "price": 17.50,
+    //   "publishedYear": 2020,
+    //   "genre": "Fantasy",
+    //   "comments": [
+    //     {
+    //       "name": "Bookworm92",
+    //       "comment": "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat."
+    //     }
+    //   ]
+    // },
+    // {
+    //   "name": "Liebe in Zeiten des Krieges",
+    //   "author": "Emilia Rot",
+    //   "likes": 1800,
+    //   "liked": true,
+    //   "price": 19.99,
+    //   "publishedYear": 2016,
+    //   "genre": "Romantik",
+    //   "comments": [
+    //     {
+    //       "name": "Bibliophile23",
+    //       "comment": "Die Fantasiewelt war so lebendig, ich konnte das Buch kaum aus der Hand legen."
+    //     },
+    //     {
+    //       "name": "StorySeeker",
+    //       "comment": "Eine unglaublich berührende Liebesgeschichte, die mich tief bewegt hat."
+    //     },
+    //     {
+    //       "name": "SciFiExplorer",
+    //       "comment": "Spannende Zukunftsvisionen und interessante Charaktere machten diesen Roman einzigartig."
+    //     }
+    //   ]
+    // }
   ]
