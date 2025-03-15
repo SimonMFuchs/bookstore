@@ -54,10 +54,14 @@ function setLikeIcon(index) {
 
   if (books[index].liked == true) {
     likesRef.innerHTML = books[index].likes + 1;
-    document.getElementById(`like-btn-icon${index}`).innerHTML = "♥️";
+    document.getElementById(`like-btn-icon${index}`).innerHTML = /*html*/`
+      <img class="icon-heart" src="./assets/icons/heart-filled.png" alt="heart icon">
+    ` ;
   } else {
     likesRef.innerHTML = books[index].likes;
-    document.getElementById(`like-btn-icon${index}`).innerHTML = "🖤";
+    document.getElementById(`like-btn-icon${index}`).innerHTML = /*html*/`
+    <img class="icon-heart" src="./assets/icons/heart-empty.png" alt="heart icon">
+  ` ;
   }
 }
 

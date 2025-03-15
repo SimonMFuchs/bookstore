@@ -56,6 +56,7 @@ header span {
     height: 160px;
     width: auto;
     margin: 24px;
+    border-radius: 12px;
 }
 
 .book-info {
@@ -146,17 +147,27 @@ header span {
     color: rgba(250, 235, 215, 0.667);
 }
 
+.likes-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .like-btn {
     background: none;
     border: none;
-    font-size: 30px;
-    padding-bottom: 6px;
+}
+
+.like-btn img {
+    height: 36px;
+    width: 40px;
+    margin: 0;
+    padding-top: 4px;
 }
 
 .like-btn:hover {
     cursor: pointer;
-    background-color: #082029;
-    border-radius: 10px;
+    filter: saturate(1.4);
 }
 
 .comment-btn {

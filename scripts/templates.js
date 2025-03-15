@@ -8,9 +8,9 @@ function templateShelfLevel(index) {
             <div class="book-info">
                 <div class="book-info-head">
                     <span class="book-price">${books[index].price.toFixed(2)} €</span>
-                    <div>
+                    <div class="likes-content">
                       <span id="likes${index}"></span>
-                      <button id="like-btn-icon${index}" class="like-btn" onclick="toggleLike(${index})">♥️</button>
+                      <button id="like-btn-icon${index}" class="like-btn" onclick="toggleLike(${index})"></button>
                     </div>
                 </div>
                 <div class="book-info-body">
