@@ -8,7 +8,7 @@ function templateShelfLevel(){
                 <div class="book-info">
                     <div class="book-info-head">
                         <span class="book-price">19,99</span>
-                        <span class="like-btn">♥️</span>
+                        <span class="like-btn">1249 ♥️</span>
                     </div>
                     <div class="book-info-body">
                     <table>

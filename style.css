@@ -7,14 +7,27 @@ body {
     margin: 0;
 }
 
-header{
+header {
     background-color: #082029;
     height: 80px;
     display: flex;
     align-items: center;
 }
 
-#bookshelf {}
+h1 {
+    margin-left: 60px;
+}
+
+header span {
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+#bookshelf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .shelf-level {
     margin: var(--gap);
@@ -53,18 +66,18 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px;    
+    margin: 16px;
 }
 
 .book-info-body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 16px;  
+    margin: 16px;
 }
 
 .book-comments {
-    margin: 16px;  
+    margin: 16px;
 }
 
 .book-comments-content {
