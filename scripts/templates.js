@@ -3,7 +3,7 @@ function templateShelfLevel(index) {
         <div class="shelf-level">
             <h2>${books[index].name}</h2>
             <div class="separator"></div>
-            <img src="./assets/img/book-dummy.png" alt="${books[index].name} cover">
+            <img src="${books[index].image}" alt="${books[index].name} cover">
             <div class="separator"></div>
             <div class="book-info">
                 <div class="book-info-head">

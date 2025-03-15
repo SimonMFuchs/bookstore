@@ -2,6 +2,7 @@ let books = [
     {
       "name": "Die Geheimnisse des Ozeans",
       "author": "Clara Meer",
+      "image": "./assets/img/book-cover0.webp",
       "likes": 1250,
       "liked": true,
       "price": 19.99,
@@ -33,6 +34,7 @@ let books = [
     {
       "name": "Der vergessene Pfad",
       "author": "Maximilian Schwarz",
+      "image": "./assets/img/book-cover1.webp",
       "likes": 980,
       "liked": false,
       "price": 14.50,
@@ -43,6 +45,7 @@ let books = [
     {
       "name": "Die Farben des Himmels",
       "author": "Laura Blau",
+      "image": "./assets/img/book-cover2.webp",
       "likes": 1520,
       "liked": true,
       "price": 22.95,
