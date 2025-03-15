@@ -1,4 +1,5 @@
 function init(id) {
+  loadBooksLocal();
   renderShelfLevels(id);
 }
 
@@ -10,7 +11,7 @@ function renderShelfLevels(id) {
   for (let indexBook = 0; indexBook < arr.length; indexBook++) {
     contentRef.innerHTML += templateShelfLevel(indexBook);
     renderComments(indexBook);
-    toggleLike(indexBook);
+    toggleLikeIcon(indexBook);
   }
 }
 
@@ -19,6 +20,7 @@ function renderComments(index) {
   let commentsContentRef = document.getElementById("book-comments-content" + index);
   commentsContentRef.innerHTML = "";
   commentsTemplateSwitch(arrComments, commentsContentRef);
+  saveBooksLocal();
 }
 
 function commentsTemplateSwitch(arrComments, commentsContentRef) {
@@ -39,12 +41,23 @@ function toggleLike(index) {
   let likesRef = document.getElementById(`likes${index}`);
 
   if (books[index].liked == true) {
+    books[index].liked = false;    
+  } else {
+    books[index].liked = true;    
+  }
+
+  toggleLikeIcon(index);
+  saveBooksLocal();
+}
+
+function toggleLikeIcon(index) {
+  let likesRef = document.getElementById(`likes${index}`);
+
+  if (books[index].liked == true) {
     likesRef.innerHTML = books[index].likes + 1;
-    books[index].liked = false;
     document.getElementById(`like-btn-icon${index}`).innerHTML = "♥️";
   } else {
     likesRef.innerHTML = books[index].likes;
-    books[index].liked = true;
     document.getElementById(`like-btn-icon${index}`).innerHTML = "🖤";
   }
 }
@@ -52,14 +65,24 @@ function toggleLike(index) {
 function addComment(index) {
   inputCommentRef = document.getElementById("comment-input" + index);
   let commentObj = {
-    "name": `Giuli`,
-    "comment": `${inputCommentRef.value}`,
+    name: `Giuli`,
+    comment: `${inputCommentRef.value}`,
   };
   books[index].comments.unshift(commentObj);
   renderComments(index);
   inputCommentRef.value = "";
 }
 
-console.log(books[0].comments);
-
 // console.log(books[0].comments.length);
+
+function saveBooksLocal() {
+  localStorage.setItem("books", JSON.stringify(books));
+}
+
+function loadBooksLocal() {
+  let booksLocal = JSON.parse(localStorage.getItem("books"));
+
+  if (!booksLocal == "") {
+    books = booksLocal;
+  }
+}
