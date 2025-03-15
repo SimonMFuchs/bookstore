@@ -72,9 +72,15 @@ header span {
 
 .book-info-body {
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     margin: 16px;
+}
+
+.key-column, .value-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 8px;
 }
 
 .book-comments {
@@ -88,9 +94,11 @@ header span {
     overflow-y: auto;
 }
 
-.book-comments-content table tr {
-    display: flex;
-    align-items: flex-start;
+.books-comments-content-style table tbody tr:nth-child(1) {
+    width: 200px;
 }
 
+/* #book-comments-content0 table tr:nth-child(1) {
+    width: 200px;
+} */
 

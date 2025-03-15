@@ -30,27 +30,23 @@ function templateShelfLevel(index) {
                       <span class="like-btn">${books[index].likes} ♥️</span>
                   </div>
                   <div class="book-info-body">
-                  <table>
-                      <tr>
-                          <td>Author:</td>
-                          <td>${books[index].author}</td>
-                      </tr>
-                      <tr>
-                          <td>Erscheinungsjahr:</td>
-                          <td>${books[index].publishedYear}</td>
-                      </tr>
-                      <tr>
-                          <td>Genre</td>
-                          <td>${books[index].genre}</td>
-                      </tr>
-                  </table>
+                    <div class="key-column">
+                      <span>Author:</span>
+                      <span>Erscheinungsjahr:</span>
+                      <span>Genre</span>
+                    </div>
+                    <div class="value-column">
+                      <span>${books[index].author}</span>
+                      <span>${books[index].publishedYear}</span>
+                      <span>${books[index].genre}</span>
+                    </div>
                   </div>
                   <div class="separator"></div>
               </div>
               <div class="book-comments">
                   <h3>Kommentare:</h3>   
                   <div class="book-comments-wrapper">
-                    <div id="book-comments-content${index}"></div>
+                    <div id="book-comments-content${index}" class="books-comments-content-style"></div>
                   </div>
                   <div class="book-add-comment">
                       <input type="text" name="" id="" placeholder="Schreibe dein Kommentar...">
@@ -60,6 +56,21 @@ function templateShelfLevel(index) {
           </div>
       `;
 }
+
+{/* <table>
+<tr>
+    <td>Author:</td>
+    <td>${books[index].author}</td>
+</tr>
+<tr>
+    <td>Erscheinungsjahr:</td>
+    <td>${books[index].publishedYear}</td>
+</tr>
+<tr>
+    <td>Genre</td>
+    <td>${books[index].genre}</td>
+</tr>
+</table> */}
 
 console.log(books[0].comments.length);
 
@@ -74,20 +85,21 @@ switch (arrComments.length) {
     break;
 
   default:
+    for (let indexComments = 0; indexComments < arrComments.length; indexComments++) {
+      let nameAndComment = arrComments[indexComments];
+      commentsContentRef.innerHTML += /*html*/ `
+        <table>
+            <tr>
+                <td>${nameAndComment.name}</td>
+                <td>:${nameAndComment.comment}</td>
+            </tr>
+        </table>
+      `;
+    }
     break;
 }
 
-  for (let indexComments = 0; indexComments < arrComments.length; indexComments++) {
-    let nameAndComment = arrComments[indexComments];
-    commentsContentRef.innerHTML += /*html*/ `
-      <table>
-          <tr>
-              <td>${nameAndComment.name}</td>
-              <td>:${nameAndComment.comment}</td>
-          </tr>
-      </table>
-    `;
-  }
+
 }
 
 {
