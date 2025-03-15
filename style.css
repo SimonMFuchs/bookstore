@@ -94,11 +94,41 @@ header span {
     overflow-y: auto;
 }
 
-.books-comments-content-style table tbody tr:nth-child(1) {
-    width: 200px;
+.books-comments-content-table {
+    display: flex;
+    flex-direction: column;
 }
 
-/* #book-comments-content0 table tr:nth-child(1) {
-    width: 200px;
-} */
+.books-comments-content-row {
+    display: inline-flex;
+    margin-bottom: 8px;
+}
 
+.books-comments-content-row span {
+    width: 50%;
+}
+
+.book-add-comment {
+    margin-top: 12px;
+}
+
+.comment-input-style {
+    color: black;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding-bottom: 6px;
+}
+
+.like-btn:hover {
+    cursor: pointer;
+    background-color: #082029;
+    border-radius: 10px;
+}
+
+/* .icon-liked {
+    background-color: black;    
+} */
