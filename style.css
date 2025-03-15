@@ -39,7 +39,6 @@ header span {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    flex-grow: 1 1 300px;
 }
 
 .separator {
@@ -70,16 +69,29 @@ header span {
     margin: 16px;
 }
 
+.book-price {
+    color: #E15D57;
+    font-weight: 600;
+    font-size: 24px;
+}
+
 .book-info-body {
     display: flex;
     justify-content: flex-start;
     margin: 16px;
 }
 
-.key-column, .value-column {
+.key-column {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 37%;
+    gap: 8px;
+}
+
+.value-column {
+    display: flex;
+    flex-direction: column;
+    width: 63%;
     gap: 8px;
 }
 
@@ -104,8 +116,12 @@ header span {
     margin-bottom: 8px;
 }
 
-.books-comments-content-row span {
-    width: 50%;
+.books-comments-content-row span:nth-child(even) {
+    width: 63%;
+}
+
+.books-comments-content-row span:nth-child(odd) {
+    width: 37%;
 }
 
 .book-add-comment {
@@ -142,10 +158,6 @@ header span {
     background-color: #082029;
     border-radius: 10px;
 }
-
-/* .icon-liked {
-    background-color: black;    
-} */
 
 .comment-btn {
     background: none;
