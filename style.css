@@ -109,11 +109,25 @@ header span {
 }
 
 .book-add-comment {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 12px;
 }
 
 .comment-input-style {
-    color: black;
+    height: 24px;
+    width: 75%;
+    min-width: 180px;
+    color: antiquewhite;
+    background-color: #124758;
+    border: none;
+    border-bottom: 2px solid lightblue;
+    padding: 2px 8px;
+}
+
+.comment-input-style::placeholder {
+    color: rgba(250, 235, 215, 0.667);
 }
 
 .like-btn {
@@ -132,3 +146,17 @@ header span {
 /* .icon-liked {
     background-color: black;    
 } */
+
+.comment-btn {
+    background: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    padding-bottom: 6px;
+}
+
+.comment-btn:hover {
+    cursor: pointer;
+    background-color: #082029;
+
+}

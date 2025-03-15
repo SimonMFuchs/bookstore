@@ -51,14 +51,12 @@ function templateShelfLevel(index) {
               </div>
               <div class="book-add-comment">
                   <input type="text" id="comment-input${index}" class="comment-input-style" placeholder="Schreibe deinen Kommentar...">
-                  <button onclick="addComment(${index})">📝</button>
+                  <button onclick="addComment(${index})" class="comment-btn">📝</button>
               </div>
           </div>
       </div>
   `;
 }
-
-// console.log(books[0].comments.length);
 
 function renderComments(index) {
   let arrComments = books[index].comments;
@@ -88,10 +86,6 @@ function templateBookComments(nameAndComment) {
   `;
 }
 
-function addComment(index){
-  inputCommentRef = document.getElementById("comment-input" + index);
-}
-
 function toggleLike(index){
   let likesRef = document.getElementById(`likes${index}`);
 
@@ -106,3 +100,18 @@ function toggleLike(index){
     document.getElementById(`like-btn-icon${index}`).innerHTML = '🖤';
   }
 }
+
+function addComment(index){
+  inputCommentRef = document.getElementById("comment-input" + index);
+  let commentObj = {
+    "name":`Giuli`,
+    "comment":`${inputCommentRef.value}`
+  }
+  books[index].comments.push(commentObj);
+  renderComments(index);
+}
+
+console.log(books[0].comments);
+
+
+// console.log(books[0].comments.length);
