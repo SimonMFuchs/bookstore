@@ -117,11 +117,11 @@ header span {
 }
 
 .books-comments-content-row span:nth-child(even) {
-    width: 63%;
+    width: 61%;
 }
 
 .books-comments-content-row span:nth-child(odd) {
-    width: 37%;
+    width: 39%;
 }
 
 .book-add-comment {

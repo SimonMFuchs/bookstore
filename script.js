@@ -11,7 +11,7 @@ function renderShelfLevels(id) {
   for (let indexBook = 0; indexBook < arr.length; indexBook++) {
     contentRef.innerHTML += templateShelfLevel(indexBook);
     renderComments(indexBook);
-    toggleLikeIcon(indexBook);
+    setLikeIcon(indexBook);
   }
 }
 
@@ -38,7 +38,6 @@ function commentsTemplateSwitch(arrComments, commentsContentRef) {
 }
 
 function toggleLike(index) {
-  let likesRef = document.getElementById(`likes${index}`);
 
   if (books[index].liked == true) {
     books[index].liked = false;    
@@ -46,11 +45,11 @@ function toggleLike(index) {
     books[index].liked = true;    
   }
 
-  toggleLikeIcon(index);
+  setLikeIcon(index);
   saveBooksLocal();
 }
 
-function toggleLikeIcon(index) {
+function setLikeIcon(index) {
   let likesRef = document.getElementById(`likes${index}`);
 
   if (books[index].liked == true) {
