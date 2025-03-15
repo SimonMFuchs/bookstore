@@ -19,7 +19,7 @@ h1 {
 }
 
 header span {
-    font-size: 24px;
+    font-size: 22px;
     margin-left: 8px;
 }
 
@@ -43,7 +43,8 @@ header span {
 }
 
 .separator {
-    height: 2px;
+    min-height: 2px;
+    flex: 1 1 0;
     width: 100%;
     background-color: lightblue;
 }
@@ -78,9 +79,11 @@ header span {
 
 .book-comments {
     margin: 16px;
+    display: flex;
+    flex-direction: column;
 }
 
-.book-comments-content {
+.book-comments-wrapper {
     height: 160px;
     overflow-y: auto;
 }
@@ -89,3 +92,5 @@ header span {
     display: flex;
     align-items: flex-start;
 }
+
+
