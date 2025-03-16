@@ -37,7 +37,7 @@ function templateShelfLevel(index) {
                 </div>
                 <div class="book-add-comment">
                     <input type="text" id="comment-input${index}" class="comment-input-style" placeholder="Schreibe deinen Kommentar...">
-                    <button onclick="addComment(${index})" class="comment-btn"></button>
+                    <button onclick="permitComment(${index})" class="comment-btn"></button>
                 </div>
             </div>
         </div>

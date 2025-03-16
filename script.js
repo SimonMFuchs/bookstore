@@ -60,22 +60,19 @@ function setLikeIcon(index) {
     likesRef.innerHTML = books[index].likes;
     document.getElementById(`like-btn-icon${index}`).classList.add('like-btn-not-liked');
     document.getElementById(`like-btn-icon${index}`).classList.remove('like-btn-liked');
-
   }
 }
 
 function addComment(index) {
   inputCommentRef = document.getElementById("comment-input" + index);
   let commentObj = {
-    name: `Giuli`,
+    name: `Me`,
     comment: `${inputCommentRef.value}`,
   };
   books[index].comments.unshift(commentObj);
   renderComments(index);
   inputCommentRef.value = "";
 }
-
-// console.log(books[0].comments.length);
 
 function saveBooksLocal() {
   localStorage.setItem("books", JSON.stringify(books));
@@ -88,3 +85,42 @@ function loadBooksLocal() {
     books = booksLocal;
   }
 }
+
+function permitComment(index){
+  let commented = books[index].comments.find((element) => element['name'] == "Me");
+  let inputRef = document.getElementById(`comment-input${index}`).value;
+  if (commented)  {
+    alert("Du hast dieses Buch bereits kommentiert.");
+  } else if(inputRef.length < 3) {
+    alert("Dein Kommentar ist zu kurz.")
+  } else {
+    addComment(index);
+  } 
+}
+
+const data = [
+  {
+      id: 1,
+      name: "Kategorie A",
+      items: [
+          { id: 101, title: "Item 1", hasCommented: false },
+          { id: 102, title: "Item 2", hasCommented: true }
+      ]
+  },
+  {
+      id: 2,
+      name: "Kategorie B",
+      items: [
+          { id: 201, title: "Item 3", hasCommented: true },
+          { id: 202, title: "Item 4", hasCommented: false }
+      ]
+  }
+];
+
+function checkIds(i){
+  let keyTitle = data[i].items.find((element) => element['title'] == "Item 1");
+  if (keyTitle){
+    console.log("Es befindet sich bereits hier");
+  }
+}
+
