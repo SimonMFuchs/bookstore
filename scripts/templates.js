@@ -3,7 +3,9 @@ function templateShelfLevel(index) {
         <div class="shelf-level">
             <h2>${books[index].name}</h2>
             <div class="separator"></div>
-            <img src="${books[index].image}" alt="${books[index].name} cover">
+            <div class="book-image-container">
+              <img src="${books[index].image}" alt="${books[index].name} cover">
+            </div>
             <div class="separator"></div>
             <div class="book-info">
                 <div class="book-info-head">
@@ -35,7 +37,7 @@ function templateShelfLevel(index) {
                 </div>
                 <div class="book-add-comment">
                     <input type="text" id="comment-input${index}" class="comment-input-style" placeholder="Schreibe deinen Kommentar...">
-                    <button onclick="addComment(${index})" class="comment-btn">📝</button>
+                    <button onclick="addComment(${index})" class="comment-btn"></button>
                 </div>
             </div>
         </div>

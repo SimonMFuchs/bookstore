@@ -1,15 +1,20 @@
 :root {
     --gap: clamp(0.75rem, 6.071vw - 0.464rem, 5rem);
+    --inner-margin: clamp(1rem, 3.478vw + 0.304rem, 1.5rem);
+    --input: clamp(13.375rem, 74.783vw - 1.582rem, 24.125rem);
 }
 
 body {
-    background-color: #04171F;
+    background-color: #05171E;
     margin: 0;
 }
 
 header {
     background-color: #082029;
     height: 80px;
+}
+
+header div {
     display: flex;
     align-items: center;
 }
@@ -18,7 +23,7 @@ h1 {
     margin-left: 60px;
 }
 
-header span {
+header div span {
     font-size: 22px;
     margin-left: 8px;
 }
@@ -30,10 +35,11 @@ header span {
 }
 
 .shelf-level {
-    margin: var(--gap);
-    min-height: 500px;
-    max-width: 400px;
-    background-color: #0D3341;
+    margin-top: 32px;
+    margin-left: var(--gap);
+    margin-right: var(--gap);
+    max-width: 480px;
+    background-color: #0D3240;
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
@@ -45,15 +51,25 @@ header span {
     min-height: 2px;
     flex: 1 1 0;
     width: 100%;
-    background-color: lightblue;
+    background-color: #6DBFDD;
 }
 
 .shelf-level h2 {
     text-align: center;
+    margin-left: var(--inner-margin);
+    margin-right: var(--inner-margin);
 }
 
-.shelf-level img {
-    height: 160px;
+.book-image-container {
+    display: flex;
+    justify-content: center ;
+    background: linear-gradient(180deg, #0D303C 0%, #124758 15.39%, #124758 84.7%, #0D303C 100%);
+    width: 100%;
+
+}
+
+.book-image-container img {
+    height: 200px;
     width: auto;
     margin: 24px;
     border-radius: 12px;
@@ -67,7 +83,8 @@ header span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px;
+    margin: 16px var(--inner-margin);
+
 }
 
 .book-price {
@@ -79,7 +96,7 @@ header span {
 .book-info-body {
     display: flex;
     justify-content: flex-start;
-    margin: 16px;
+    margin: 16px var(--inner-margin);
 }
 
 .key-column {
@@ -97,7 +114,7 @@ header span {
 }
 
 .book-comments {
-    margin: 16px;
+    margin: 16px var(--inner-margin);
     display: flex;
     flex-direction: column;
 }
@@ -134,12 +151,11 @@ header span {
 
 .comment-input-style {
     height: 24px;
-    width: 75%;
-    min-width: 180px;
+    width: var(--input);
     color: antiquewhite;
     background-color: #124758;
     border: none;
-    border-bottom: 2px solid lightblue;
+    border-bottom: 2px solid #6DBFDD;
     padding: 2px 8px;
 }
 
@@ -173,13 +189,27 @@ header span {
 .comment-btn {
     background: none;
     border: none;
-    border-radius: 10px;
     font-size: 24px;
-    padding-bottom: 6px;
+    margin: 8px 8px 12px 8px;
+    width: 30px;
+    height: 25px;
+    background-image: url('./assets/icons/paper-plane-btn.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
 }
 
 .comment-btn:hover {
     cursor: pointer;
-    background-color: #082029;
-
+    background-image: url('./assets/icons/paper-plane-btn-hover.png');
 }
+
+@media(max-width: 520px) {
+    header span {
+        display: none;
+    }
+
+    .shelf-level {
+        font-size: 14px;
+    }
+}
+
