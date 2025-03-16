@@ -16,6 +16,11 @@ header {
     background-color: #082029;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+}
+
 header div {
     display: flex;
     align-items: center;
@@ -37,6 +42,27 @@ h1 {
 h1 span {
     font-size: 40px;
     color: #E15D57;
+}
+
+.filter-liked-container {
+    margin-right: 60px;
+}
+
+.filter-liked-container button {
+    margin-top: 0;
+    margin-bottom: 19px;
+    height: 80px;
+    width: 45px;
+    border: none;
+    background: none;
+    background-image: url('./assets/icons/bookmark-filter.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
+}
+
+.filter-liked-container button:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
 }
 
 #bookshelf {
@@ -225,6 +251,8 @@ h1 span {
     cursor: pointer;
     background-image: url('./assets/icons/paper-plane-btn-hover.png');
 }
+
+
 
 @media(max-width: 700px) {
     .subheading {
