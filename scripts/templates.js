@@ -52,3 +52,10 @@ function templateBookComments(nameAndComment) {
         </div>
     `;
 }
+
+function templateObjComment(inputCommentRef){
+  return {
+    name: `Giuli`,
+    comment: `${inputCommentRef.value}`,
+  }
+}

@@ -77,7 +77,7 @@ let books = [
     {
       "name": "Das Rätsel der Zeit",
       "author": "Alexander Weiss",
-      "image": "./assets/img/book-dummy.png",
+      "image": "./assets/img/book-cover3.webp",
       "likes": 750,
       "liked": false,
       "price": 18.00,
@@ -97,7 +97,7 @@ let books = [
     {
       "name": "Der letzte Wächter",
       "author": "Sabine Grün",
-      "image": "./assets/img/book-dummy.png",
+      "image": "./assets/img/book-cover4.webp",
       "likes": 1300,
       "liked": true,
       "price": 16.75,

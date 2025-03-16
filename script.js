@@ -65,10 +65,7 @@ function setLikeIcon(index) {
 
 function addComment(index) {
   inputCommentRef = document.getElementById("comment-input" + index);
-  let commentObj = {
-    name: `Me`,
-    comment: `${inputCommentRef.value}`,
-  };
+  let commentObj = templateObjComment(inputCommentRef);
   books[index].comments.unshift(commentObj);
   renderComments(index);
   inputCommentRef.value = "";
@@ -87,7 +84,7 @@ function loadBooksLocal() {
 }
 
 function permitComment(index){
-  let commented = books[index].comments.find((element) => element['name'] == "Me");
+  let commented = books[index].comments.find((element) => element['name'] == "Giuli");
   let inputRef = document.getElementById(`comment-input${index}`).value;
   if (commented)  {
     alert("Du hast dieses Buch bereits kommentiert.");
