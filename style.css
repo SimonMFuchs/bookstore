@@ -11,7 +11,6 @@ body {
 
 header {
     background-color: #082029;
-    height: 80px;
 }
 
 header div {
@@ -19,13 +18,22 @@ header div {
     align-items: center;
 }
 
-h1 {
-    margin-left: 60px;
+header div img {
+    margin: 8px 16px 8px 60px;
 }
 
-header div span {
+.subheading {
     font-size: 22px;
     margin-left: 8px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h1 span {
+    font-size: 40px;
+    color: #E15D57;
 }
 
 #bookshelf {
@@ -172,18 +180,32 @@ header div span {
 .like-btn {
     background: none;
     border: none;
+    height: 39px;
+    width: 45px;
+    margin-bottom: 8px;
+    margin-left: 8px;
 }
 
-.like-btn img {
-    height: 36px;
-    width: 40px;
-    margin: 0;
-    padding-top: 4px;
+.like-btn-not-liked {
+    background-image: url('./assets/icons/heart-empty.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
 }
 
-.like-btn:hover {
+.like-btn-liked {
+    background-image: url('./assets/icons/heart-filled.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
+}
+
+.like-btn-liked:hover {
     cursor: pointer;
-    filter: saturate(1.4);
+    background-image: url('./assets/icons/heart-filled-hover-light.png');
+}
+
+.like-btn-not-liked:hover {
+    cursor: pointer;
+    background-image: url('./assets/icons/heart-empty-hover-light.png');
 }
 
 .comment-btn {
@@ -194,7 +216,7 @@ header div span {
     width: 30px;
     height: 25px;
     background-image: url('./assets/icons/paper-plane-btn.png');
-    background-size: contain ;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -203,9 +225,25 @@ header div span {
     background-image: url('./assets/icons/paper-plane-btn-hover.png');
 }
 
-@media(max-width: 520px) {
-    header span {
+@media(max-width: 700px) {
+    .subheading {
         display: none;
+    }
+}
+
+@media(max-width: 520px) {
+
+    header div {
+        justify-content: center;
+    }
+
+    header div img {
+        height: 56px;
+        margin-left: 0;
+    }
+
+    h1, header span {
+        font-size: 32px;
     }
 
     .shelf-level {
