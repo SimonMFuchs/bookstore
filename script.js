@@ -97,30 +97,3 @@ function permitComment(index){
     addComment(index);
   } 
 }
-
-const data = [
-  {
-      id: 1,
-      name: "Kategorie A",
-      items: [
-          { id: 101, title: "Item 1", hasCommented: false },
-          { id: 102, title: "Item 2", hasCommented: true }
-      ]
-  },
-  {
-      id: 2,
-      name: "Kategorie B",
-      items: [
-          { id: 201, title: "Item 3", hasCommented: true },
-          { id: 202, title: "Item 4", hasCommented: false }
-      ]
-  }
-];
-
-function checkIds(i){
-  let keyTitle = data[i].items.find((element) => element['title'] == "Item 1");
-  if (keyTitle){
-    console.log("Es befindet sich bereits hier");
-  }
-}
-

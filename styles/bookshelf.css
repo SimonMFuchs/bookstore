@@ -1,0 +1,187 @@
+#bookshelf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shelf-level {
+    margin-top: 32px;
+    margin-left: var(--outer-margin);
+    margin-right: var(--outer-margin);
+    max-width: 480px;
+    background-color: #0D3240;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.separator {
+    min-height: 2px;
+    flex: 1 1 0;
+    width: 100%;
+    background-color: #6DBFDD;
+}
+
+.shelf-level h2 {
+    text-align: center;
+    margin-left: var(--inner-margin);
+    margin-right: var(--inner-margin);
+}
+
+.book-image-container {
+    display: flex;
+    justify-content: center ;
+    background: linear-gradient(180deg, #0D303C 0%, #124758 15.39%, #124758 84.7%, #0D303C 100%);
+    width: 100%;
+
+}
+
+.book-image-container img {
+    height: 200px;
+    width: auto;
+    margin: 24px;
+    border-radius: 12px;
+}
+
+.book-info {
+    width: 100%;
+}
+
+.book-info-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px var(--inner-margin);
+
+}
+
+.book-price {
+    color: #E15D57;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.book-info-body {
+    display: flex;
+    justify-content: flex-start;
+    margin: 16px var(--inner-margin);
+}
+
+.key-column {
+    display: flex;
+    flex-direction: column;
+    width: var(--key-width);
+    gap: 8px;
+}
+
+.value-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.book-comments {
+    margin: 16px var(--inner-margin);
+    display: flex;
+    flex-direction: column;
+}
+
+.book-comments-wrapper {
+    height: 160px;
+    overflow-y: auto;
+}
+
+.books-comments-content-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.books-comments-content-row {
+    display: inline-flex;
+    margin-bottom: 8px;
+}
+
+.books-comments-content-row span:nth-child(even) {
+    width: 61%;
+}
+
+.books-comments-content-row span:nth-child(odd) {
+    width: var(--key-width);
+}
+
+.book-add-comment {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.comment-input-style {
+    height: 24px;
+    width: var(--input);
+    color: antiquewhite;
+    background-color: #124758;
+    border: none;
+    border-bottom: 2px solid #6DBFDD;
+    padding: 2px 8px;
+}
+
+.comment-input-style::placeholder {
+    color: rgba(250, 235, 215, 0.667);
+}
+
+.likes-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    height: 39px;
+    width: 45px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+.like-btn-not-liked {
+    background-image: url('./assets/icons/heart-empty.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
+}
+
+.like-btn-liked {
+    background-image: url('./assets/icons/heart-filled.png');
+    background-size: contain ;
+    background-repeat: no-repeat;
+}
+
+.like-btn-liked:hover {
+    cursor: pointer;
+    background-image: url('./assets/icons/heart-filled-hover-light.png');
+}
+
+.like-btn-not-liked:hover {
+    cursor: pointer;
+    background-image: url('./assets/icons/heart-empty-hover-light.png');
+}
+
+.comment-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin: 8px 8px 12px 8px;
+    width: 30px;
+    height: 25px;
+    background-image: url('./assets/icons/paper-plane-btn.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.comment-btn:hover {
+    cursor: pointer;
+    background-image: url('./assets/icons/paper-plane-btn-hover.png');
+}
