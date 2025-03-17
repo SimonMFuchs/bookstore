@@ -134,7 +134,7 @@ let books = [
     {
       "name": "Jenseits der Sterne",
       "author": "Oliver Schwarz",
-      "image": "../assets/img/book-cover6.jpg",
+      "image": "./assets/img/book-cover6.jpg",
       "bookmarked": false,
       "likes": 1450,
       "liked": true,
