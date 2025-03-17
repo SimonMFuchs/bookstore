@@ -1,23 +1,24 @@
+let booksBookmarked = [];
+
 function init(id) {
   loadBooksLocal();
-  renderShelfLevels(id);
+  renderShelfLevels(id, books);
 }
 
-function renderShelfLevels(id) {
+function renderShelfLevels(id, arr) {
   let contentRef = document.getElementById(id);
   contentRef.innerHTML = "";
-  let arr = books;
 
   for (let indexBook = 0; indexBook < arr.length; indexBook++) {
-    contentRef.innerHTML += templateShelfLevel(indexBook);
-    renderComments(indexBook);
+    contentRef.innerHTML += templateShelfLevel(indexBook, arr);
+    renderComments(indexBook, arr);
     setLikeIcon(indexBook);
     setBookmarkIcon(indexBook);
   }
 }
 
-function renderComments(index) {
-  let arrComments = books[index].comments;
+function renderComments(index, arr) {
+  let arrComments = arr[index].comments;
   let commentsContentRef = document.getElementById("book-comments-content" + index);
   commentsContentRef.innerHTML = "";
   commentsTemplateSwitch(arrComments, commentsContentRef);
@@ -36,6 +37,20 @@ function commentsTemplateSwitch(arrComments, commentsContentRef) {
       }
       break;
   }
+}
+
+function renderBookmarked(){
+  booksBookmarked = [];
+
+  for (let indexBookmark = 0; indexBookmark < books.length; indexBookmark++) {
+    let bookmarkRef = books[indexBookmark].bookmarked;
+    
+    if (bookmarkRef == true) {
+      booksBookmarked.push(books[indexBookmark])
+    } 
+  }
+
+  renderShelfLevels('bookshelf', booksBookmarked);
 }
 
 function toggleLike(index) {

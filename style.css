@@ -107,7 +107,7 @@ h1 span {
 .book-image-container img {
     height: 200px;
     width: auto;
-    margin: 24px;
+    margin: 32px 24px;
     border-radius: 12px;
 }
 
@@ -214,7 +214,10 @@ h1 span {
 }
 
 .bookmark-btn-activated {
-    margin-top: -43px;
+    height: 56px;
+    width: 28.5px;
+    margin-top: -39px;
+    margin-right: 12px;
     background-image: url("./assets/icons/bookmark-set.png");
     background-size: contain ;
     background-repeat: no-repeat;
@@ -223,14 +226,15 @@ h1 span {
 .bookmark-btn-deactivated {
     width: 24px;
     margin-top: -71px;
-    margin-right: 10px;
+    margin-right: 14px;
     background-image: url("./assets/icons/bookmark-unset.png");
     background-size: contain ;
     background-repeat: no-repeat;
 }
 
-.bookmark-btn-deactivated {
-    background-image: url("./assets/icons/bookmark-unset.png");
+.bookmark-btn-deactivated:hover {
+    margin-top: -82px;
+    background-image: url("./assets/icons/bookmark-unset-hover.png");
 }
 
 .likes-content {

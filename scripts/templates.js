@@ -1,17 +1,17 @@
-function templateShelfLevel(index) {
+function templateShelfLevel(index, arr) {
   return /*html*/ `
         <div class="shelf-level">
-            <h2>${books[index].name}</h2>
+            <h2>${arr[index].name}</h2>
             <div class="separator"></div>
             <div class="book-image-container">
-              <img src="${books[index].image}" alt="${books[index].name} cover">
+              <img src="${arr[index].image}" alt="${arr[index].name} cover">
             </div>
             <div class="separator"></div>
             <div class="book-info">
                 <div class="book-info-head">
-                    <span class="book-price">${books[index].price.toFixed(2)} €</span>
+                    <span class="book-price">${arr[index].price.toFixed(2)} €</span>
                     <div class="likes-content">
-                      <button id="bookmark-btn-icon${index}" class="bookmark-btn" onclick="toggleBookmark(${index})"></button>
+                      <button id="bookmark-btn-icon${index}" class="bookmark-btn" onclick="toggleBookmark(${index})" title="Lesezeichen"></button>
                       <span id="likes${index}"></span>
                       <button id="like-btn-icon${index}" class="like-btn" onclick="toggleLike(${index})"></button>
                     </div>
@@ -23,9 +23,9 @@ function templateShelfLevel(index) {
                     <span>Genre</span>
                   </div>
                   <div class="value-column">
-                    <span>: ${books[index].author}</span>
-                    <span>: ${books[index].publishedYear}</span>
-                    <span>: ${books[index].genre}</span>
+                    <span>: ${arr[index].author}</span>
+                    <span>: ${arr[index].publishedYear}</span>
+                    <span>: ${arr[index].genre}</span>
                   </div>
                 </div>
                 <div class="separator"></div>
