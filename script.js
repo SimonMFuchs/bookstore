@@ -12,6 +12,7 @@ function renderShelfLevels(id) {
     contentRef.innerHTML += templateShelfLevel(indexBook);
     renderComments(indexBook);
     setLikeIcon(indexBook);
+    setBookmarkIcon(indexBook);
   }
 }
 
@@ -49,6 +50,18 @@ function toggleLike(index) {
   saveBooksLocal();
 }
 
+function toggleBookmark(index) {
+
+  if (books[index].bookmarked == true) {
+    books[index].bookmarked = false;    
+  } else {
+    books[index].bookmarked = true;    
+  }
+
+  setBookmarkIcon(index);
+  saveBooksLocal();
+}
+
 function setLikeIcon(index) {
   let likesRef = document.getElementById(`likes${index}`);
 
@@ -60,6 +73,16 @@ function setLikeIcon(index) {
     likesRef.innerHTML = books[index].likes;
     document.getElementById(`like-btn-icon${index}`).classList.add('like-btn-not-liked');
     document.getElementById(`like-btn-icon${index}`).classList.remove('like-btn-liked');
+  }
+}
+
+function setBookmarkIcon(index) {
+  if (books[index].bookmarked == true) {
+    document.getElementById(`bookmark-btn-icon${index}`).classList.add('bookmark-btn-activated');
+    document.getElementById(`bookmark-btn-icon${index}`).classList.remove('bookmark-btn-deactivated');
+  } else {
+    document.getElementById(`bookmark-btn-icon${index}`).classList.add('bookmark-btn-deactivated');
+    document.getElementById(`bookmark-btn-icon${index}`).classList.remove('bookmark-btn-activated');
   }
 }
 
