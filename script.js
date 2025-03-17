@@ -36,7 +36,7 @@ function renderComments(index, arr) {
   let commentsContentRef = document.getElementById("book-comments-content" + index);
   commentsContentRef.innerHTML = "";
   commentsTemplateSwitch(arrComments, commentsContentRef);
-  saveBooksLocal();
+   ;
 }
 
 function commentsTemplateSwitch(arrComments, commentsContentRef) {
