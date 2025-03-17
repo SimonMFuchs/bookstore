@@ -5,6 +5,7 @@
     --input: clamp(13.375rem, 74.783vw - 1.582rem, 24.125rem);
     --shelf-width: clamp(18.75rem, 92.593vw + 0.231rem, 21.875rem);
     --key-width: clamp(7rem, 14vw + 4.2rem, 8.75rem);
+    --header-margin: clamp(0.25rem, 6vw - 0.95rem, 1rem);
 }
 
 body {
@@ -44,31 +45,43 @@ h1 span {
     color: #E15D57;
 }
 
-.filter-liked-container {
+.filter-bookmarked-container {
     margin-right: 60px;
 }
 
-.filter-liked-container button {
+.filter-btn-style {
     margin-top: 0;
     margin-bottom: 19px;
     height: 80px;
-    width: 45px;
+    width: 31.5px;
     border: none;
     background: none;
-    background-image: url('./assets/icons/bookmark-filter.png');
+    background-image: url('./assets/icons/bookmark-filter-shorter.png');
     background-size: contain ;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;  
+    transition: all 0.3s ease;
 }
 
-.filter-liked-container button:hover {
+.filter-btn-style:hover {
     cursor: pointer;
+    background-image: url('./assets/icons/bookmark-filter.png');
     filter: brightness(1.1);
+}
+
+.filter-btn-clicked {
+    background-image: url('./assets/icons/bookmark-filter.png');
+}
+
+.filter-btn-clicked:hover {
+    background-image: url('./assets/icons/bookmark-filter-bit-shorter.png');
 }
 
 #bookshelf {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .shelf-level {
@@ -107,7 +120,7 @@ h1 span {
 .book-image-container img {
     height: 200px;
     width: auto;
-    margin: 24px;
+    margin: 32px 24px;
     border-radius: 12px;
 }
 
@@ -205,7 +218,7 @@ h1 span {
     background: none;
     background-size: contain ;
     background-repeat: no-repeat;
-    margin-top: -43px
+    margin-top: -43px;
 }
 
 .bookmark-btn:hover {
@@ -214,7 +227,10 @@ h1 span {
 }
 
 .bookmark-btn-activated {
-    margin-top: -43px;
+    height: 56px;
+    width: 28.5px;
+    margin-top: -39px;
+    margin-right: 12px;
     background-image: url("./assets/icons/bookmark-set.png");
     background-size: contain ;
     background-repeat: no-repeat;
@@ -222,15 +238,16 @@ h1 span {
 
 .bookmark-btn-deactivated {
     width: 24px;
-    margin-top: -71px;
-    margin-right: 10px;
+    margin-top: -70px;
+    margin-right: 14px;
     background-image: url("./assets/icons/bookmark-unset.png");
     background-size: contain ;
     background-repeat: no-repeat;
 }
 
-.bookmark-btn-deactivated {
-    background-image: url("./assets/icons/bookmark-unset.png");
+.bookmark-btn-deactivated:hover {
+    margin-top: -81px;
+    background-image: url("./assets/icons/bookmark-unset-hover.png");
 }
 
 .likes-content {
@@ -287,9 +304,11 @@ h1 span {
     background-image: url('./assets/icons/paper-plane-btn-hover.png');
 }
 
+.d-none {
+    display: none;
+}
 
-
-@media(max-width: 700px) {
+@media(max-width: 720px) {
     .subheading {
         display: none;
     }
@@ -297,17 +316,28 @@ h1 span {
 
 @media(max-width: 520px) {
 
+    .header-content {
+        justify-content: center;
+    }
+
     header div {
         justify-content: center;
     }
 
     header div img {
         height: 56px;
-        margin-left: 0;
+        margin-left: var(--header-margin);
+        margin-right: var(--header-margin);
     }
 
     h1, header span {
         font-size: 32px;
+    }
+
+    .filter-bookmarked-container {
+        margin-right: var(--header-margin);
+        margin-left: var(--header-margin);
+
     }
 
     .shelf-level {

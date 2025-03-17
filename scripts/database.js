@@ -36,7 +36,7 @@ let books = [
       "name": "Der vergessene Pfad",
       "author": "Maximilian Schwarz",
       "image": "./assets/img/book-cover1.webp",
-      "bookmarked": true,
+      "bookmarked": false,
       "likes": 980,
       "liked": false,
       "price": 14.50,
@@ -102,7 +102,7 @@ let books = [
       "name": "Der letzte Wächter",
       "author": "Sabine Grün",
       "image": "./assets/img/book-cover4.webp",
-      "bookmarked": false,
+      "bookmarked": true,
       "likes": 1300,
       "liked": true,
       "price": 16.75,
@@ -113,7 +113,7 @@ let books = [
     {
       "name": "Im Schatten des Mondes",
       "author": "Philipp Silber",
-      "image": "./assets/img/book-dummy.png",
+      "image": "./assets/img/book-cover5.jpg",
       "bookmarked": false,
       "likes": 890,
       "liked": false,
@@ -134,7 +134,7 @@ let books = [
     {
       "name": "Jenseits der Sterne",
       "author": "Oliver Schwarz",
-      "image": "./assets/img/book-dummy.png",
+      "image": "../assets/img/book-cover6.jpg",
       "bookmarked": false,
       "likes": 1450,
       "liked": true,
@@ -151,7 +151,7 @@ let books = [
     {
       "name": "Das verborgene Königreich",
       "author": "Elena Gold",
-      "image": "./assets/img/book-dummy.png",
+      "image": "./assets/img/book-cover7.jpg",
       "bookmarked": false,
       "likes": 920,
       "liked": false,
@@ -168,7 +168,7 @@ let books = [
     {
       "name": "Liebe in Zeiten des Krieges",
       "author": "Emilia Rot",
-      "image": "./assets/img/book-dummy.png",      
+      "image": "./assets/img/book-cover8.jpg",
       "bookmarked": false,
       "likes": 1800,
       "liked": true,

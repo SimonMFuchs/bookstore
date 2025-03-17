@@ -1,3 +1,5 @@
+let clickCount = 0;
+
 function init(id) {
   loadBooksLocal();
   renderShelfLevels(id);
@@ -39,7 +41,6 @@ function commentsTemplateSwitch(arrComments, commentsContentRef) {
 }
 
 function toggleLike(index) {
-
   if (books[index].liked == true) {
     books[index].liked = false;    
   } else {
@@ -51,7 +52,6 @@ function toggleLike(index) {
 }
 
 function toggleBookmark(index) {
-
   if (books[index].bookmarked == true) {
     books[index].bookmarked = false;    
   } else {
@@ -116,4 +116,28 @@ function permitComment(index){
   } else {
     addComment(index);
   } 
+}
+
+function filterBookmarked() {
+  clickCount++;
+  toggleBookmarkFilterBtnStyle();
+
+  switch (clickCount % 2) {
+    case 1:
+      for (let indexFilter = 0; indexFilter < books.length; indexFilter++) {
+        let discardBookRef = books[indexFilter].bookmarked;
+    
+        if (discardBookRef == false) {
+          document.getElementById(`level${indexFilter}`).classList.toggle('d-none');
+        } 
+      }      
+      break;
+    default:
+      renderShelfLevels('bookshelf');
+      break;
+  }
+}
+
+function toggleBookmarkFilterBtnStyle(){
+  document.getElementById('filter-btn').classList.toggle('filter-btn-clicked');
 }

@@ -1,6 +1,6 @@
 function templateShelfLevel(index) {
   return /*html*/ `
-        <div class="shelf-level">
+        <div id="level${index}" class="shelf-level">
             <h2>${books[index].name}</h2>
             <div class="separator"></div>
             <div class="book-image-container">
