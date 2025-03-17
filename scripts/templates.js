@@ -11,7 +11,7 @@ function templateShelfLevel(index, arr) {
                 <div class="book-info-head">
                     <span class="book-price">${arr[index].price.toFixed(2)} €</span>
                     <div class="likes-content">
-                      <button id="bookmark-btn-icon${index}" class="bookmark-btn" onclick="toggleBookmark(${index})" title="Lesezeichen"></button>
+                      <button id="bookmark-btn-icon${index}" class="bookmark-btn" onclick="toggleBookmark(${index}, '${arr}')" title="Lesezeichen"></button>
                       <span id="likes${index}"></span>
                       <button id="like-btn-icon${index}" class="like-btn" onclick="toggleLike(${index})"></button>
                     </div>

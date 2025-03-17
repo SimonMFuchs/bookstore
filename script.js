@@ -1,8 +1,22 @@
 let booksBookmarked = [];
+let clickCount = 0;
 
 function init(id) {
   loadBooksLocal();
   renderShelfLevels(id, books);
+}
+
+function switchRenderArray(){
+  clickCount++;
+
+  switch (clickCount % 2) {
+    case 1:
+      renderBookmarked();
+      break;
+    default:
+      renderShelfLevels('bookshelf', books);
+      break;
+  }
 }
 
 function renderShelfLevels(id, arr) {
