@@ -2,7 +2,7 @@
     --gap: clamp(0.75rem, 6.071vw - 0.464rem, 5rem);
     --inner-margin: clamp(1rem, 3.478vw + 0.304rem, 1.5rem);
     --outer-margin: clamp(1.25rem, 2.759vw + 0.603rem, 1.5rem);
-    --input: clamp(13.375rem, 74.783vw - 1.582rem, 24.125rem);
+    --input: clamp(11.875rem, 85vw - 5.125rem, 22.5rem);
     --shelf-width: clamp(18.75rem, 92.593vw + 0.231rem, 21.875rem);
     --key-width: clamp(7rem, 14vw + 4.2rem, 8.75rem);
     --header-margin: clamp(0.25rem, 6vw - 0.95rem, 1rem);
