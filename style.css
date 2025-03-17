@@ -62,7 +62,7 @@ h1 span {
 
 .filter-liked-container button:hover {
     cursor: pointer;
-    filter: brightness(0.8);
+    filter: brightness(1.1);
 }
 
 #bookshelf {
@@ -196,6 +196,30 @@ h1 span {
 
 .comment-input-style::placeholder {
     color: rgba(250, 235, 215, 0.667);
+}
+
+.favorite-btn {
+    height: 50px;
+    width: 40px;
+    border: none;
+    background: none;
+    background-image: url("./assets/icons/bookmark-set.png");
+    background-size: contain ;
+    background-repeat: no-repeat;
+    margin-top: -43px
+}
+
+.favorite-btn:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+.favorite-btn-activated {
+    margin-top: -43px
+}
+
+.favorite-btn-deactivated {
+    margin-top: -63px
 }
 
 .likes-content {
